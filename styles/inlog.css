@@ -1,0 +1,259 @@
+@font-face {
+    font-family: Nexa Regular;
+    src: url("../fonts/Nexa-Regular.otf");
+}
+
+@font-face {
+    font-family: Nexa Bold;
+    src: url("../fonts/Nexa-Bold.otf");
+}
+
+@font-face {
+    font-family: Nexa Light;
+    src: url("../fonts/Nexa-Light.otf");
+}
+
+body {
+    background-color: #f3e5d8;
+    font-family: Nexa Regular;
+    margin: 0;
+    padding: 0;
+}
+
+/*header elementen*/
+header {
+    background-color: white;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header>a>img {
+    height: 4em;
+    width: auto;
+    margin: 1em;
+    margin-left: 1.5em;
+}
+
+header>nav {
+    margin: auto;
+    margin-right: 1em;
+    display: flex;
+}
+
+header>nav>ul {
+    display: flex;
+}
+
+header>nav>ul>li:nth-of-type(1) {
+    background-image: url(../images/heart-icon-pink.png);
+    background-size: 4rem;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    list-style: none;
+    margin-right: 1em;
+}
+
+header>nav>ul>li:nth-of-type(2) {
+    background-image: url(../images/profile-icon-green.png);
+    background-size: 4rem;
+    background-repeat: no-repeat;
+    width: 4em;
+    height: 4em;
+    list-style: none;
+}
+
+li>a {
+    padding: 4em;
+}
+
+/*inlog/registreer formulier*/
+form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+    }
+
+fieldset {
+    background-color: #f5f8fa;
+    border: 0;
+    border-radius: 0.75rem;
+    padding: 1.75rem 2rem;
+    margin: 1.2em;
+    margin-top: -1em;
+    min-width: 12.5em;
+    width: 40%;
+}
+
+input {
+    padding: 0 2.5rem 0 0.5rem;
+    border-radius: 0.5rem;
+    display: block;
+    line-height: 1.5;
+    border: .0625rem solid #91a3b7;
+    margin-bottom: 1.5em;
+    margin-top: 0.5em;
+    width: 75%;
+    height: 1.75em;
+    outline: 0;
+}
+
+input:hover {
+    border-color: #2800a0;
+}
+
+form label {
+    display: inline-block;
+}
+
+[type="checkbox"] {
+    display: inline-block;
+    width: 1em;
+    margin-left: -0.05em;
+    margin-bottom: 2em;
+}
+
+/*form states, bron: codepen van joostf*/
+fieldset .requirements {
+    display: block;
+    color: #00d66c;
+}
+fieldset:invalid .requirements {
+    display: none;
+}
+
+fieldset:valid .succes {
+    opacity:1;
+    color: white;
+    background-color: #00d66c;
+    padding: 1em;
+    transition:all .2s;
+}
+
+fieldset:invalid .succes {
+    opacity: 0;
+}
+
+input:invalid {
+}
+
+input:valid {
+    background: url(../images/check-icon-green.png);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    background-position: 90%, 1em;
+    border-color: #00d66c;
+}
+
+input:focus {
+    border: .0625rem solid #2800a0;
+}
+
+/*buttons*/
+button {
+    background-color: #fb3568;
+    border: none;
+    color: white;
+    padding: 0.4375em 1.5em 0.5625em;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    box-shadow: 0 0.1875em 0.0625em #ca2b55;
+    border-radius: 1.25em;
+    margin-bottom: -1em;
+}
+
+button:hover {
+    background-color: #fc507d;
+    transition: #fc507d .2s linear;
+    transition-property: #fc507d;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: initial;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fb3568;
+}
+
+legend {
+    font-family: Nexa Regular;
+    font-size: 1.5rem;
+    color: #2800a0;
+    line-height: 1.875rem;
+    font-weight: bold;
+    padding-top: 2em;
+    margin-bottom: -0.5em;
+    margin-left: -0.1em
+}
+
+fieldset>fieldset {
+    color: #00d66c;
+    margin-left: -2em;
+    margin-bottom: -1em;
+}
+
+/*medium content*/
+@media screen and (min-width: 48em) {
+    /*header*/
+    img[src$="images/Tekengebied%201.png"] {
+    height: 4em;
+    width: auto;
+    margin-left: 1.5em;
+    margin-top: 1em;
+    }
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+    }
+}
+
+/*big content*/
+@media screen and (min-width: 60em) {
+    /*header*/
+    img[src$="images/Tekengebied%201.png"] {
+    height: 4em;
+    width: auto;
+    margin-left: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 0.8em;
+    }
+    
+    img[src$="images/profile-icon-green.png"] {
+        display: none;
+    }
+    
+    header>img[src$="images/heart-icon-pink.png"] {
+        display: none;
+    }
+    /*form*/
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    fieldset {
+        width: 40%;
+    }
+    
+    fieldset:nth-of-type(2)
+}
