@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/inlog.css" type="text/css">
+    <title>Inloggen</title>
+</head>
+
+<body>
+    <header>
+        <a href="verhalen.html"><img src="images/Tekengebied%201.png"></a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="lijst.html"></a>
+                </li>
+                <li>
+                    <a href="inlog.html"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <form>
+        <fieldset>
+            <legend>Inloggen</legend>
+            <label for="email">E-mail adres</label>
+            <input type="email" placeholder="viaverhalen@gmail.com" id="email" required>
+            <label for="psw">Wachtwoord</label>
+            <input type="password" id="psw" required>
+            <input type="checkbox" checked="checked" id="inlog"> 
+            <label for="inlog">Ingelogd blijven</label>
+            <button type="submit">Inloggen</button>
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Registreren</legend>
+            <label for="emailreg">E-mail adres</label>
+            <input type="email" placeholder="viaverhalen@gmail.com" id="emailreg" required>
+            <label for="pswreg">Wachtwoord</label>
+            <input type="password" id="pswreg" required>
+            <p class="succes">Klik op registreren om je account succesvol aan te maken</p>
+            <button type="submit">Registreren</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
